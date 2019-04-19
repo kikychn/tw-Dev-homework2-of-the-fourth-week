@@ -50,4 +50,21 @@ class FizzBuzzTest {
         assertThat(fizz.fizzBuzz(45), is("FizzBuzz"));
     }
 
+    @Test
+    void test_fizzBuzz_with_special_digit_3_and_7() {
+        assertThat(fizz.fizzBuzz(21), is("FizzWhizz"));
+        assertThat(fizz.fizzBuzz(42), is("FizzWhizz"));
+    }
+
+    @Test
+    void test_fizzBuzz_with_special_digit_5_and_7() {
+        assertThat(fizz.fizzBuzz(35), is("BuzzWhizz"));
+        assertThat(fizz.fizzBuzz(70), is("BuzzWhizz"));
+    }
+
+    @Test
+    void test_fizzBuzz_with_special_digit_3_5_and_7() {
+        assertThat(fizz.fizzBuzz(105), is("FizzBuzzWhizz"));
+        assertThat(fizz.fizzBuzz(210), is("FizzBuzzWhizz"));
+    }
 }
