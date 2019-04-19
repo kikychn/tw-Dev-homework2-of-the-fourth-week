@@ -10,7 +10,7 @@ public class FizzBuzz {
             stringBuilder.append("Buzz");
         }
         if (i % 7 == 0) {
-            return "Whizz";
+            stringBuilder.append("Whizz");
         }
         return stringBuilder.length() > 0 ? stringBuilder.toString() : String.valueOf(i);
     }
