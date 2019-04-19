@@ -2,15 +2,16 @@ package com.thoughtworks.tdd;
 
 public class FizzBuzz {
     public String fizzBuzz(int i) {
+        StringBuilder stringBuilder = new StringBuilder();
         if (i % 3 == 0) {
-            return "Fizz";
+            stringBuilder.append("Fizz");
         }
         if (i % 5 == 0) {
-            return "Buzz";
+            stringBuilder.append("Buzz");
         }
         if (i % 7 == 0) {
             return "Whizz";
         }
-        return String.valueOf(i);
+        return stringBuilder.length() > 0 ? stringBuilder.toString() : String.valueOf(i);
     }
 }
