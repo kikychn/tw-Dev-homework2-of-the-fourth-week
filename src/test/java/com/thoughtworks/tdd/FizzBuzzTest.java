@@ -21,4 +21,11 @@ class FizzBuzzTest {
         assertThat(fizz.fizzBuzz(2), is("2"));
         assertThat(fizz.fizzBuzz(4), is("4"));
     }
+
+    @Test
+    void test_fizzBuzz_with_special_digit_3() {
+        assertThat(fizz.fizzBuzz(3), is("Fizz"));
+        assertThat(fizz.fizzBuzz(6), is("Fizz"));
+        assertThat(fizz.fizzBuzz(9), is("Fizz"));
+    }
 }
