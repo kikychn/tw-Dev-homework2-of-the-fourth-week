@@ -1,7 +1,7 @@
 package com.thoughtworks.tdd;
 
-public class FizzBuzz {
-    public String fizzBuzz(int i) {
+public class Game {
+    public String play(int i) {
         StringBuilder stringBuilder = new StringBuilder();
         if (i % 3 == 0) {
             stringBuilder.append("Fizz");
