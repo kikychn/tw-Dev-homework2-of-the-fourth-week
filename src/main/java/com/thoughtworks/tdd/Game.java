@@ -1,17 +1,26 @@
 package com.thoughtworks.tdd;
 
+import com.thoughtworks.tdd.model.Fizz;
+import com.thoughtworks.tdd.model.FizzBuzzWhizzService;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Game {
-    public String play(int i) {
-        StringBuilder stringBuilder = new StringBuilder();
-        if (i % 3 == 0) {
-            stringBuilder.append("Fizz");
+
+    List<FizzBuzzWhizzService> services;
+
+    public Game() {
+        this.services = new ArrayList<>();
+        services.add(new Fizz());
+    }
+
+    public String play(int number) {
+        for (FizzBuzzWhizzService service : services) {
+            if (service.isMatch(number)) {
+                return service.getVoice();
+            }
         }
-        if (i % 5 == 0) {
-            stringBuilder.append("Buzz");
-        }
-        if (i % 7 == 0) {
-            stringBuilder.append("Whizz");
-        }
-        return stringBuilder.length() > 0 ? stringBuilder.toString() : String.valueOf(i);
+        return String.valueOf(number);
     }
 }
