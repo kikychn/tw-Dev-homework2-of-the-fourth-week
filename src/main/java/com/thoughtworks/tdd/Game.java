@@ -11,6 +11,7 @@ public class Game {
 
     public Game() {
         this.services = new ArrayList<>();
+        services.add(new FizzBuzzWhizz());
         services.add(new BuzzWhizz());
         services.add(new FizzWhizz());
         services.add(new FizzBuzz());
