@@ -7,7 +7,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 class GameTest {
-    Game game;
+    public Game game;
 
     @BeforeEach
     void setUp() {
